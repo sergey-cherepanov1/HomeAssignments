@@ -9,5 +9,5 @@ void Hello()
 {
 	std::string s;
 	getline(std::cin, s);
-	std::cout << "Hello" << s << std::endl; 
+	std::cout << "Hello " << s << std::endl; 
 }
