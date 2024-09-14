@@ -7,7 +7,11 @@
 
 void Hello()
 {
+	std::cout << "Hello, World!" << std::endl;
 	std::string s;
-	getline(std::cin, s);
-	std::cout << "Hello, " << s << "!" << std::endl; 
+	while (true)
+	{
+		getline(std::cin, s);
+		std::cout << "Hello, " << s << "!" << std::endl; 
+	}
 }
