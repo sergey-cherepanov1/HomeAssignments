@@ -5,13 +5,7 @@
 #include <iostream>
 #include <string>
 
-void Hello()
+void Hello(std::string s)
 {
-	std::cout << "Hello, World!" << std::endl;
-	std::string s;
-	while (true)
-	{
-		getline(std::cin, s);
-		std::cout << "Hello, " << s << "!" << std::endl; 
-	}
+	std::cout << "Hello, " << s << "!\n";
 }

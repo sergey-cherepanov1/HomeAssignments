@@ -1,11 +1,16 @@
-task-1: main.o hello.o
-	g++ main.o hello.o -o task-1
+CPP = g++
+RUN = task-1
+OBJS = main.o hello.o 
 
-main.o: main.cpp
-	g++ -c main.cpp
+all: $(RUN)
 
-hello.o: hello.cpp hello.h
-	g++ -c hello.cpp
+$(RUN): $(OBJS)
+	$(CPP) $(OBJS) -o $@
+
+%.o: %.cpp
+	$(CPP) -c $<
 
 clean:
-	rm *.o task-1
+	rm *.o $(RUN)
+
+hello.o: hello.h

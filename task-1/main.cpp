@@ -3,9 +3,17 @@
 */
 
 #include <iostream>
+#include <string>
 #include "hello.h"
 
 int main(int arc, char *argv[])
 {
-	Hello();
+	std::cout << "Hello, World!\n";
+	std::string s;
+	while (true)
+	{
+		getline(std::cin, s);
+		Hello(s);
+	}
+	return 0;
 }
