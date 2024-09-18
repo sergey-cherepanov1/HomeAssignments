@@ -7,10 +7,8 @@ all: $(RUN)
 $(RUN): $(OBJS)
 	$(CPP) $(OBJS) -o $@
 
-%.o: %.cpp
+%.o: %.cpp %.h
 	$(CPP) -c $<
 
 clean:
 	rm *.o $(RUN)
-
-hello.o: hello.h
