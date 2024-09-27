@@ -3,7 +3,6 @@
 */
 
 #include <iostream>
-#include <string>
 #include "hello.h"
 
 int main(int arc, char *argv[])
