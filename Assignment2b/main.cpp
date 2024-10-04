@@ -44,5 +44,7 @@ int main()
                                 start++;
                 }
         }
-	std::cout << *(start - 1) << std::endl;
+	start--;
+	std::cout << *start << std::endl;
+	delete[] start;
 }
