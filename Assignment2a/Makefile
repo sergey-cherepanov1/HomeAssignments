@@ -11,7 +11,7 @@ $(RUN): $(OBJS)
 	$(CPP) -c $<
 
 clean:
-	rm *.o $(RUN)
+	rm *.o output $(RUN)
 
 cleanall:
 	rm *.o *.cpp $(RUN)

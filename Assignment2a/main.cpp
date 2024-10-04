@@ -2,26 +2,36 @@
    Assignment2a
 */
 
+#include <iostream>
 #include <fstream>
 #include <filesystem>
 
 int main()
 {
-	std::uintmax_t size = std::filesystem::file_size("sample.bin") / 4;
-	int* arr = new int[size];
+	unsigned f_size = std::filesystem::file_size("sample");
+	char* arr = new char[f_size];
 	std::ifstream infile;
-	infile.open("sample.bin", std::ios::binary | std::ios::in);
-	infile.read((char *)arr, size * sizeof(int));
-	infile.close();
+	infile.open("sample", std::ios::binary | std::ios::in);
 
-	for (int i = 0; i < size / 2; i++)
-        {
-                 std::swap(arr[i], arr[size - (i + 1)]);
-        }
+    /*reading file*/
+    int size = 0;
+    while (infile >> arr[size])
+    {
+        size++;
+    }
+    infile.close();
 
+    /*reverse*/
+    for (int i = 0; i < size / 2; i++)
+    {
+        std::swap(arr[i], arr[size - (i + 1)]);
+    }
+
+    /*writing file*/
 	std::ofstream outfile;
-	outfile.open("output.bin", std::ios::binary | std::ios::out);
-	outfile.write((char *)arr, size * sizeof(int));
+	outfile.open("output", std::ios::binary | std::ios::out);
+	outfile.write((char *)arr, size * sizeof(arr[0]));
 	outfile.close();
+
 	delete[] arr;
 }
