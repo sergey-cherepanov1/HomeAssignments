@@ -9,9 +9,9 @@ int main()
 	while (true)
 	{
 		std::string str;
-		std::cout << "Введите строку в формате ОПЗ:" << std::endl;
+		std::cout << "Enter the string in RPN format:" << std::endl;
 		std::getline(std::cin, str);
-		int *start = new int[str.length()];
+		double *start = new double[str.length()];
 		for (int i = 0; i < str.length(); i++)
 		{
 		        switch (str[i])
@@ -48,7 +48,7 @@ int main()
 		        }
 		}
 		start--;
-		std::cout << "Ответ: " << *start << std::endl;
+		std::cout << "Answer: " << *start << std::endl;
 		delete[] start;
 	}
 }
