@@ -43,7 +43,7 @@ int main()
 		                                temp += str[i];
 		                                i++;
 		                        }
-		                        *start = stoi(temp);
+		                        *start = stod(temp);
 		                        start++;
 		        }
 		}
