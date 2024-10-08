@@ -2,7 +2,6 @@
    Assignment2a
 */
 
-#include <iostream>
 #include <fstream>
 #include <filesystem>
 
@@ -14,11 +13,14 @@ int main()
 	infile.open("sample", std::ios::binary | std::ios::in);
 
     /*reading file*/
-    int size = 0;
-    while (infile >> arr[size])
+    std::string line;
+    std::getline(infile, line);
+    int size = line.length();
+    for (int i = 0; i < size; i++)
     {
-        size++;
+        arr[i] = line[i];
     }
+
     infile.close();
 
     /*reverse*/
