@@ -12,28 +12,29 @@ int main()
 		std::cout << "Enter the string in RPN format:" << std::endl;
 		std::getline(std::cin, str);
 		double *start = new double[str.length()];
+        double *end = start;
 		for (int i = 0; i < str.length(); i++)
 		{
 		        switch (str[i])
 		        {
 		                case '+':
-		                        *(start - 2) = *(start - 2) + *(start - 1);
-		                        start--;
+		                        *(end - 2) = *(end - 2) + *(end - 1);
+		                        end--;
 		                        i++;
 		                        break;
 				case '-':
-		                        *(start - 2) = *(start - 2) - *(start - 1);
-		                        start--;
+		                        *(end - 2) = *(end - 2) - *(end - 1);
+		                        end--;
 		                        i++;
 		                        break;
 				case '*':
-		                        *(start - 2) = *(start - 2) * *(start - 1);
-		                        start--;
+		                        *(end - 2) = *(end - 2) * *(end - 1);
+		                        end--;
 		                        i++;
 		                        break;
 				case '/':
-		                        *(start - 2) = *(start - 2) / *(start - 1);
-		                        start--;
+		                        *(end - 2) = *(end - 2) / *(end - 1);
+		                        end--;
 		                        i++;
 		                        break;
 		                default:
@@ -43,12 +44,12 @@ int main()
 		                                temp += str[i];
 		                                i++;
 		                        }
-		                        *start = stod(temp);
-		                        start++;
+		                        *end = stod(temp);
+		                        end++;
 		        }
 		}
-		start--;
-		std::cout << "Answer: " << *start << std::endl;
-		delete[] start;
-	}
+		end--;
+		std::cout << "Answer: " << *end << std::endl;
+	    delete[] start;
+    }
 }
