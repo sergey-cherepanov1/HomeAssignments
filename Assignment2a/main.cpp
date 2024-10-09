@@ -2,6 +2,7 @@
    Assignment2a
 */
 
+#include <iostream>
 #include <fstream>
 #include <filesystem>
 
@@ -9,18 +10,18 @@ int main()
 {
 	unsigned f_size = std::filesystem::file_size("sample");
 	char* arr = new char[f_size];
-	std::ifstream infile;
-	infile.open("sample", std::ios::binary | std::ios::in);
 
     /*reading file*/
-    std::string line;
-    std::getline(infile, line);
-    int size = line.length();
-    for (int i = 0; i < size; i++)
+	std::ifstream infile;
+	infile.open("sample", std::ios::binary | std::ios::in);
+    char c;
+    int size = 0;
+    while (infile.get(c))
     {
-        arr[i] = line[i];
+        arr[size] = c;
+        size++;
     }
-
+    size--;
     infile.close();
 
     /*reverse*/
