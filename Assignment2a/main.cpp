@@ -2,26 +2,20 @@
    Assignment2a
 */
 
-#include <iostream>
 #include <fstream>
 #include <filesystem>
 
 int main()
 {
-	unsigned f_size = std::filesystem::file_size("sample");
-	char* arr = new char[f_size];
+	unsigned size = std::filesystem::file_size("sample") - 1;
+	char* arr = new char[size];
 
     /*reading file*/
 	std::ifstream infile;
 	infile.open("sample", std::ios::binary | std::ios::in);
-    char c;
-    int size = 0;
-    while (infile.get(c))
-    {
-        arr[size] = c;
-        size++;
-    }
-    size--;
+
+    infile.read(arr, size);
+
     infile.close();
 
     /*reverse*/
