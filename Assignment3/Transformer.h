@@ -9,19 +9,19 @@ class Transformer
 {
 public:
     Transformer(unsigned ammo = 0, double fuel = 0, unsigned level = 0, bool form = true, Gun gun = Gun("shotgun"));
-    void transform();
-    void fire();
-    void drive(unsigned km);
+    bool transform();
+    bool fire();
+    bool drive(unsigned km);
     
-    unsigned get_ammo();
-    double get_fuel();
-    unsigned get_level();
+    bool get_ammo();
+    bool get_fuel();
+    bool get_level();
     bool get_form();
-    unsigned get_power();
-    std::string get_gun();
+    bool get_power();
+    bool get_gun();
     
-    void reload(unsigned ammo);
-	void refuel(double fuel);
+    bool reload(unsigned ammo);
+	bool refuel(double fuel);
 private:
 	unsigned _ammo;
     double _fuel;
