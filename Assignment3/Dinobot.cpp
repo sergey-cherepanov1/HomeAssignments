@@ -2,7 +2,7 @@
 
 Dinobot::Dinobot(std::string species, unsigned hunger) : _species(species), _hunger(hunger) {}
 
-bool Dinobot::get_species() {return 1;}
-bool Dinobot::get_hunger() {return 1;}
-bool Dinobot::eat() {return 1;}
-bool Dinobot::roar() {return 1;}
+std::string Dinobot::get_species() {return _species;}
+unsigned Dinobot::get_hunger() {return _hunger;}
+void Dinobot::eat() {_hunger++;}
+void Dinobot::roar() {std::cout << "ROAARR!" << std::endl;}

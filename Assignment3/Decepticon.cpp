@@ -2,7 +2,7 @@
 
 Decepticon::Decepticon(std::string evilPlanName, unsigned enemyCount) : _evilPlanName(evilPlanName), _enemyCount(enemyCount) {}
 
-bool Decepticon::get_evilPlanName() {return 1;}
-bool Decepticon::get_enemyCount() {return 1;}
-bool Decepticon::make_enemy() {return 1;}
-bool Decepticon::change_plan(std::string new_plan) {return 1;}
+std::string Decepticon::get_evilPlanName() {return _evilPlanName;}
+unsigned Decepticon::get_enemyCount() {return _enemyCount;}
+void Decepticon::make_enemy() {_enemyCount++;}
+void Decepticon::change_plan(std::string new_plan) {_evilPlanName = new_plan;}

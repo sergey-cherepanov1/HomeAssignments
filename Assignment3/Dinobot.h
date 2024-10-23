@@ -7,10 +7,10 @@ class Dinobot : public Transformer
 {
 public:
 	Dinobot(std::string species, unsigned hunger = 100);
-	bool get_species();
-	bool get_hunger();
-	bool eat();
-	bool roar();
+	std::string get_species();
+	unsigned get_hunger();
+	void eat();
+	void roar();
 private:
 	std::string _species;
 	unsigned _hunger;

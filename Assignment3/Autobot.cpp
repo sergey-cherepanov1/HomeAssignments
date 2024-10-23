@@ -2,7 +2,7 @@
 
 Autobot::Autobot(std::string teamName, unsigned allyCount) : _teamName(teamName), _allyCount(allyCount) {}
 
-bool Autobot::get_teamName() {return 1;}
-bool Autobot::get_allyCount() {return 1;}
-bool Autobot::make_alliance() {return 1;}
-bool Autobot::change_team(std::string new_team) {return 1;}
+std::string Autobot::get_teamName() {return _teamName;}
+unsigned Autobot::get_allyCount() {return _allyCount;}
+void Autobot::make_alliance() {_allyCount++;}
+void Autobot::change_team(std::string new_team) {_teamName = new_team;}

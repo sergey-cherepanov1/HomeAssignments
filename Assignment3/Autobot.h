@@ -7,11 +7,11 @@
 class Autobot : public Transformer
 {
 public:
-	Autobot(std::string teamName, unsigned allyCount = 0);
-	bool get_teamName();
-	bool get_allyCount();
-	bool make_alliance();
-	bool change_team(std::string new_team);
+	Autobot(std::string teamName = "Autobots", unsigned allyCount = 0);
+	std::string get_teamName();
+	unsigned get_allyCount();
+	void make_alliance();
+	void change_team(std::string new_team);
 private:
 	std::string _teamName;	 
 	unsigned _allyCount;

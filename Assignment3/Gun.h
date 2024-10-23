@@ -7,8 +7,8 @@ class Gun
 {
 public:
 	Gun(std::string type);
-	bool get_gun();
-	bool change_gun(std::string new_gun);
+	std::string get_gun();
+	void change_gun(Gun new_gun);
 private:
 	std::string _type;
 };

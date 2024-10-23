@@ -8,10 +8,10 @@ class Decepticon : public Transformer
 {
 public:
 	Decepticon(std::string evilPlanName, unsigned enemyCount = 0);
-	bool get_evilPlanName();
-	bool get_enemyCount();
-	bool make_enemy();
-	bool change_plan(std::string new_plan);
+	std::string get_evilPlanName();
+	unsigned get_enemyCount();
+	void make_enemy();
+	void change_plan(std::string new_plan);
 private:
 	std::string _evilPlanName;	 
 	unsigned _enemyCount;

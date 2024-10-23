@@ -2,6 +2,6 @@
 
 Gun::Gun(std::string type) : _type(type) {}
 
-bool Gun::get_gun() {return 1;}
+std::string Gun::get_gun() {return _type;}
 
-bool Gun::change_gun(std::string new_gun) {return 1;}
+void Gun::change_gun(Gun new_gun) {_type = new_gun.get_gun();}

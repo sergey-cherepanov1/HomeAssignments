@@ -5,8 +5,8 @@ class Core
 {
 public:
 	Core(unsigned power);
-	bool get_power();
-	bool change_power(int power);
+	unsigned get_power();
+	void change_power(int power);
 private:
 	unsigned _power;
 };
