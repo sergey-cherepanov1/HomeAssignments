@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include "Car.h"
+#include "Gun.h"
 
 class Transformer
 {
 public:
-    Transformer(unsigned _ammo = 0, double _fuel = 0, unsigned _level = 0, bool _form = true, Car _car = Car());
+    Transformer(unsigned ammo = 0, double fuel = 0, unsigned level = 0, bool form = true, Car car = Car("truck"), Gun gun = Gun("shotgun"));
     void transform();
     void fire();
     void drive(unsigned km);
@@ -16,7 +17,8 @@ public:
     double get_fuel();
     unsigned get_level();
     bool get_form();
-    Car get_car();
+    std::string get_car();
+    std::string get_gun();
     
     void reload(unsigned ammo);
 	void refuel(double fuel);
@@ -26,6 +28,7 @@ private:
     unsigned _level;
     bool _form;
     Car _car;
+    Gun _gun;
 };
 
 #endif

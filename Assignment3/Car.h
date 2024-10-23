@@ -6,14 +6,11 @@
 class Car
 {
 public:
-	Car(std::string _type = "truck", std::string _colour = "blue");
-	std::string get_type();
-	std::string get_colour();
+	Car(std::string type);
+	std::string get_car();
 	void change_car(std::string new_car);
-	void change_colour(std::string new_colour);
 private:
 	std::string _type;
-	std::string _colour;
 };
 
 #endif

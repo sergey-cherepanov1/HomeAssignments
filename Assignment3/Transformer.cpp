@@ -1,7 +1,7 @@
 #include "Transformer.h"
 
-Transformer::Transformer(unsigned _ammo, double _fuel, unsigned _level, bool _form, Car _car)
-    : _ammo(_ammo), _fuel(_fuel), _level(_level), _form(_form), _car(_car) {}
+Transformer::Transformer(unsigned ammo, double fuel, unsigned level, bool form, Car car, Gun gun)
+    : _ammo(ammo), _fuel(fuel), _level(level), _form(form), _car(car), _gun(gun) {}
 
 void Transformer::transform()
 {
@@ -44,7 +44,8 @@ unsigned Transformer::get_ammo() {return _ammo;}
 double Transformer::get_fuel() {return _fuel; }
 unsigned Transformer::get_level() {return _level;}
 bool Transformer::get_form() {return _form;}
-Car Transformer::get_car() {return _car;}
+std::string Transformer::get_car() {return _car.get_car();}
+std::string Transformer::get_gun() {return _gun.get_gun();}
 
 void Transformer::reload(unsigned ammo) {_ammo = ammo;}
 void Transformer::refuel(double fuel) {_fuel = fuel;}
