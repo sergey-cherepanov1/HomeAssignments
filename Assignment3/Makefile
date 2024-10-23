@@ -1,6 +1,6 @@
 CPP = g++
 RUN = Assignment3
-OBJS = Car.o Gun.o Transformer.o main.o
+OBJS = Core.o Gun.o Transformer.o main.o
 
 all: $(RUN)
 

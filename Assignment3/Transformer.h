@@ -2,13 +2,13 @@
 #define TRANSFORMER_h
 
 #include <iostream>
-#include "Car.h"
+#include "Core.h"
 #include "Gun.h"
 
 class Transformer
 {
 public:
-    Transformer(unsigned ammo = 0, double fuel = 0, unsigned level = 0, bool form = true, Car car = Car("truck"), Gun gun = Gun("shotgun"));
+    Transformer(unsigned ammo = 0, double fuel = 0, unsigned level = 0, bool form = true, Gun gun = Gun("shotgun"));
     void transform();
     void fire();
     void drive(unsigned km);
@@ -17,7 +17,7 @@ public:
     double get_fuel();
     unsigned get_level();
     bool get_form();
-    std::string get_car();
+    unsigned get_power();
     std::string get_gun();
     
     void reload(unsigned ammo);
@@ -27,7 +27,7 @@ private:
     double _fuel;
     unsigned _level;
     bool _form;
-    Car _car;
+    Core _core;
     Gun _gun;
 };
 
