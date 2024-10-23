@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #include "Decepticon.h"
 
 Decepticon::Decepticon(std::string evilPlanName, unsigned enemyCount) : _evilPlanName(evilPlanName), _enemyCount(enemyCount) {}

@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #include "gtest/gtest.h"
 #include "Transformer.h"
 #include "Core.h"

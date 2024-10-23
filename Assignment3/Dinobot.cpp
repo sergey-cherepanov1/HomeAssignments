@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #include "Dinobot.h"
 
 Dinobot::Dinobot(std::string species, unsigned hunger) : _species(species), _hunger(hunger) {}

@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #ifndef TRANSFORMER_h
 #define TRANSFORMER_h
 

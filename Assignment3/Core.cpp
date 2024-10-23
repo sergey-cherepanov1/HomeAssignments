@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #include "Core.h"
 
 Core::Core(unsigned power) : _power(power) {}

@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #include "Autobot.h"
 
 Autobot::Autobot(std::string teamName, unsigned allyCount) : _teamName(teamName), _allyCount(allyCount) {}

@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #ifndef DECEPTICON_h
 #define DECEPTICON_h
 

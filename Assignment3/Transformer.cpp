@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #include "Transformer.h"
 
 Transformer::Transformer(unsigned ammo, double fuel, bool form, Gun gun)

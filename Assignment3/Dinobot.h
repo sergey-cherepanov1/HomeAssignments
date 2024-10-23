@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #ifndef DINOBOT_h
 #define DINOBOT_h
 

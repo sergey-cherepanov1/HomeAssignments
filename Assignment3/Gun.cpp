@@ -1,3 +1,7 @@
+/* Sergey Cherepanov st129987@student.spbu.ru
+   Assignment3
+*/
+
 #include "Gun.h"
 
 Gun::Gun(std::string type) : _type(type) {}
