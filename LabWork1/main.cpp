@@ -1,4 +1,5 @@
 #include "loadBMP.h"
+#include "saveBMP.h"
 
 int main()
 {
@@ -8,24 +9,18 @@ int main()
     if (loadBMP(filename1, buffer, width, height))
     {
         std::cout << "Yes" << std::endl;
-    } else {
+    }
+    else
+    {
         std::cout << "NO" << std::endl;
     }
-    std::string filename2 = "sample2.bmp";
-    
-    if (loadBMP(filename2, buffer, width, height))
+    std::string filename2 = "sample1_new.bmp";
+    if (saveBMP(filename2, buffer, width, height))
     {
         std::cout << "Yes" << std::endl;
-    } else {
-        std::cout << "NO" << std::endl;
     }
-    std::string filename3 = "sample3.bmp";
-    
-    if (loadBMP(filename3, buffer, width, height))
+    else
     {
-        std::cout << "Yes" << std::endl;
-    } else {
         std::cout << "NO" << std::endl;
     }
-    
 }

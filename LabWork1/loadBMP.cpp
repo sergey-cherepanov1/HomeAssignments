@@ -2,7 +2,7 @@
 
 bool loadBMP(const std::string& filename, std::vector<uint8_t>& imageData, int& width, int& height)
 {
-    std::ifstream file(filename, std::ios::binary);
+    std::ifstream file(filename, std::ios::binary | std::ios::in);
     if (!file.is_open())
     {
         std::cout << "Error opening file!" << std::endl;
@@ -18,15 +18,15 @@ bool loadBMP(const std::string& filename, std::vector<uint8_t>& imageData, int& 
         return false;
     }
 
-    BMPInfoHeader InfoHeader;
-    file.read((char*)&InfoHeader, sizeof(InfoHeader));
+    BMPInfoHeader infoHeader;
+    file.read((char*)&infoHeader, sizeof(infoHeader));
 
-    width = InfoHeader.width;
-    height = InfoHeader.height;
+    width = infoHeader.width;
+    height = infoHeader.height;
 
     // Calculating the image row size with alignment to a 4 bytes.
     // Row size in bytes
-    int rowSize = (width * InfoHeader.bits_per_pixel + 31) / 32 * 4;
+    int rowSize = (width * infoHeader.bits_per_pixel + 31) / 32 * 4;
 
     // Size of all image data
     int imageSize = rowSize * height;
@@ -39,7 +39,7 @@ bool loadBMP(const std::string& filename, std::vector<uint8_t>& imageData, int& 
 
     // Reading image data
     file.read((char*)imageData.data(), imageSize);
-
+    std::cout << imageSize << ' ' << infoHeader.image_size << std::endl;
     file.close();
     return true;
 }

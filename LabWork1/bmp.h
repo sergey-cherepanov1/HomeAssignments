@@ -1,6 +1,8 @@
 #ifndef BMP_h
 #define BMP_h
 
+#include <iostream>
+#include <fstream>
 #include <vector>
 #include <string>
 
@@ -22,7 +24,7 @@ struct BMPInfoHeader
     uint16_t colour_planes = 1; // Amount of colour planes, always 1
     uint16_t bits_per_pixel = 24; // Color depth in bits per pixel (24 bits for color, 8 for gray)
     uint32_t compression = 0; // compression method (0 - no compression)
-    uint32_t image_image = 0; // image size in bytes
+    uint32_t image_size = 0; // image size in bytes
     int32_t x_resolution = 0; // number of pixels per meter along the X axis (not used)
     int32_t y_resolution = 0; // number of pixels per meter along the Y axis (not used)
     uint32_t colours = 0; // Number of colors in the palette (0 if bits_per_pixel > 8)
