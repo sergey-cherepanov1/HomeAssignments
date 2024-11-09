@@ -23,7 +23,7 @@ std::istream& operator>>(std::istream& in, Gun& gun)
 {
     std::string type;
     std::cout << "Enter gun type: ";
-    in >> type;
+    std::getline(in, type);
     gun = Gun(type);
     return in;
 }

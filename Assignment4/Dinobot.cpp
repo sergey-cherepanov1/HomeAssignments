@@ -40,7 +40,7 @@ std::istream& operator>>(std::istream& in, Dinobot& dinobot)
     std::string species;
     unsigned hunger;
     std::cout << "Enter species: ";
-    in >> species;
+    std::getline(in, species);
     std::cout << "Enter hunger level: ";
     in >> hunger;
     dinobot = Dinobot(species, hunger);

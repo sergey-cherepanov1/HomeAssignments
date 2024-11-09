@@ -39,7 +39,7 @@ std::istream& operator>>(std::istream& in, Decepticon& decepticon)
     std::string evil_plan_name;
     unsigned enemy_count;
     std::cout << "Enter evil plan name: ";
-    in >> evil_plan_name;
+    std::getline(in, evil_plan_name);
     std::cout << "Enter number of enemies: ";
     in >> enemy_count;
     decepticon = Decepticon(evil_plan_name, enemy_count);
@@ -59,7 +59,7 @@ bool operator!=(const Decepticon& left, const Decepticon& right)
 
 bool operator<(const Decepticon& left, const Decepticon& right)
 {
-    if (left.get_evilPlanName() != right.get_evilPlanName())
+    if (left.get_enemyCount() != right.get_enemyCount())
     {
         return left.get_enemyCount() < right.get_enemyCount();
     }

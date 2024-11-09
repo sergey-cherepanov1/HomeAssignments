@@ -8,7 +8,7 @@ OBJS = $(SRC:%.cpp=$(OBJDIR)/%.o)
 all: $(RUN)
 
 $(RUN): $(OBJS)
-	$(CXX) $(OBJS) -o $@
+	$(CXX) $(OBJS) -o $@ -lgtest -lgtest_main -pthread
 
 $(OBJDIR)/%.o: %.cpp | $(OBJDIR)
 	$(CXX) -c $< $(FLAGS) -o $@

@@ -40,7 +40,7 @@ std::istream& operator>>(std::istream& in, Autobot& autobot)
     std::string team_name;
     unsigned ally_count;
     std::cout << "Enter team name: ";
-    in >> team_name;
+    std::getline(in, team_name);
     std::cout << "Enter number of allies: ";
     in >> ally_count;
     autobot = Autobot(team_name, ally_count);
@@ -49,8 +49,7 @@ std::istream& operator>>(std::istream& in, Autobot& autobot)
 
 bool operator==(const Autobot& left, const Autobot& right)
 {
-    return left.get_teamName() == right.get_teamName() &&
-           left.get_allyCount() == right.get_allyCount();
+    return left.get_teamName() == right.get_teamName() && left.get_allyCount() == right.get_allyCount();
 }
 
 bool operator!=(const Autobot& left, const Autobot& right)
@@ -60,7 +59,7 @@ bool operator!=(const Autobot& left, const Autobot& right)
 
 bool operator<(const Autobot& left, const Autobot& right)
 {
-    if (left.get_teamName() != right.get_teamName())
+    if (left.get_allyCount() != right.get_allyCount())
     {
         return left.get_allyCount() < right.get_allyCount();
     }
