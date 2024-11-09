@@ -11,20 +11,21 @@
 class Autobot : public Transformer
 {
 public:
-	Autobot(std::string teamName = "Autobots", unsigned allyCount = 0);
-	Autobot(std::string teamName);
+    Autobot(std::string teamName = "Autobots", unsigned allyCount = 0);
+    Autobot(std::string teamName);
     Autobot(unsigned allyCount);
-    
-	std::string get_teamName() const;
-	unsigned get_allyCount() const;
-	void make_alliance();
-	void change_team(std::string new_team);
+
+    std::string get_teamName() const;
+    unsigned get_allyCount() const;
+    void make_alliance();
+    void change_team(std::string new_team);
 private:
-	std::string _teamName;	 
-	unsigned _allyCount;
+    std::string _teamName;
+    unsigned _allyCount;
 };
 
 std::ostream& operator<<(std::ostream& out, const Autobot& autobot);
+std::istream& operator>>(std::istream& in, Autobot& autobot);
 bool operator==(const Autobot& left, const Autobot& right);
 bool operator!=(const Autobot& left, const Autobot& right);
 bool operator<(const Autobot& left, const Autobot& right);
