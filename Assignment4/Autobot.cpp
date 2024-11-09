@@ -6,6 +6,13 @@
 
 Autobot::Autobot(std::string teamName, unsigned allyCount) : Transformer(), _teamName(teamName), _allyCount(allyCount) {}
 
+Autobot::Autobot(std::string teamName) 
+    : Transformer(), _teamName(teamName), _allyCount(0) {}
+
+Autobot::Autobot(unsigned allyCount) 
+    : Transformer(), _teamName("Autobots"), _allyCount(allyCount) {}
+
+
 std::string Autobot::get_teamName() const {return _teamName;}
 unsigned Autobot::get_allyCount() const {return _allyCount;}
 void Autobot::make_alliance() {_allyCount++;}

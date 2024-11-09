@@ -7,6 +7,11 @@
 Transformer::Transformer(unsigned ammo, double fuel, bool form, Gun gun)
     : _ammo(ammo), _fuel(fuel), _form(form), _core(100), _gun(gun) {}
 
+Transformer::Transformer(unsigned ammo) 
+    : _ammo(ammo), _fuel(100), _form(true), _core(100), _gun("shotgun") {}
+
+Transformer::Transformer(double fuel) 
+    : _ammo(100), _fuel(fuel), _form(true), _core(100), _gun("shotgun") {}
 
 
 void Transformer::transform()

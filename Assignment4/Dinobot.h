@@ -11,6 +11,9 @@ class Dinobot : public Transformer
 {
 public:
 	Dinobot(std::string species, unsigned hunger = 100);
+	Dinobot(std::string species);
+    Dinobot(unsigned hunger);  
+	
 	std::string get_species() const;
 	unsigned get_hunger() const;
 	void eat();

@@ -13,8 +13,9 @@ class Transformer
 {
 public:
     Transformer(unsigned ammo = 0, double fuel = 0, bool form = true, Gun gun = Gun("shotgun"));
+    Transformer(unsigned ammo);
+    Transformer(double fuel);  
 
-    
     void transform();
     void fire();
     void drive(unsigned km);
@@ -37,6 +38,7 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& out, const Transformer& transformer);
+std::istream& operator>>(std::istream& in, Transformer& transformer);
 bool operator==(const Transformer& left, const Transformer& right);
 bool operator!=(const Transformer& left, const Transformer& right);
 bool operator<(const Transformer& left, const Transformer& right);

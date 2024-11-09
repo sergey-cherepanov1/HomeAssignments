@@ -12,6 +12,9 @@ class Autobot : public Transformer
 {
 public:
 	Autobot(std::string teamName = "Autobots", unsigned allyCount = 0);
+	Autobot(std::string teamName);
+    Autobot(unsigned allyCount);
+    
 	std::string get_teamName() const;
 	unsigned get_allyCount() const;
 	void make_alliance();

@@ -6,6 +6,12 @@
 
 Decepticon::Decepticon(std::string evilPlanName, unsigned enemyCount) : _evilPlanName(evilPlanName), _enemyCount(enemyCount) {}
 
+Decepticon::Decepticon(std::string evilPlanName)
+    : _evilPlanName(evilPlanName), _enemyCount(0) {}
+
+Decepticon::Decepticon(unsigned enemyCount) 
+    : _evilPlanName("World Domination"), _enemyCount(enemyCount) {}
+
 std::string Decepticon::get_evilPlanName() const {return _evilPlanName;}
 unsigned Decepticon::get_enemyCount() const {return _enemyCount;}
 void Decepticon::make_enemy() {_enemyCount++;}

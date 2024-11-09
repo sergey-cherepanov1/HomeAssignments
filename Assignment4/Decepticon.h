@@ -12,6 +12,9 @@ class Decepticon : public Transformer
 {
 public:
 	Decepticon(std::string evilPlanName, unsigned enemyCount = 0);
+	Decepticon(std::string evilPlanName);
+    Decepticon(unsigned enemyCount);  
+	
 	std::string get_evilPlanName() const;
 	unsigned get_enemyCount() const;
 	void make_enemy();

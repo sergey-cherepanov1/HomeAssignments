@@ -4,7 +4,14 @@
 
 #include "Dinobot.h"
 
-Dinobot::Dinobot(std::string species, unsigned hunger) : _species(species), _hunger(hunger) {}
+Dinobot::Dinobot(std::string species, unsigned hunger)
+    : _species(species), _hunger(hunger) {}
+
+Dinobot::Dinobot(std::string species)
+    : _species(species), _hunger(100) {}
+
+Dinobot::Dinobot(unsigned hunger) 
+    : _species("T-Rex"), _hunger(hunger) {}
 
 std::string Dinobot::get_species() const {return _species;}
 unsigned Dinobot::get_hunger() const {return _hunger;}
