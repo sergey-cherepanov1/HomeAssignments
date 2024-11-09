@@ -12,9 +12,10 @@
 #include "Transformer.h"
 
 // Test for the input/output stream operators for Transformer
-TEST(TransformerTest, TestInputOutput) {
+TEST(TransformerTest, TestInputOutput)
+{
     Transformer transformer(10, 50.0, true, Gun("laser"));
-    
+
     // Stringstream to capture the output
     std::stringstream ss;
 
@@ -31,7 +32,8 @@ TEST(TransformerTest, TestInputOutput) {
 }
 
 // Test for the input/output stream operators for Autobot
-TEST(AutobotTest, TestInputOutput) {
+TEST(AutobotTest, TestInputOutput)
+{
     Autobot autobot("Autobots", 5);
     std::stringstream ss;
 
@@ -45,7 +47,8 @@ TEST(AutobotTest, TestInputOutput) {
 }
 
 // Test for the input/output stream operators for Decepticon
-TEST(DecepticonTest, TestInputOutput) {
+TEST(DecepticonTest, TestInputOutput)
+{
     Decepticon decepticon("Destroy the world", 3);
     std::stringstream ss;
 
@@ -59,7 +62,8 @@ TEST(DecepticonTest, TestInputOutput) {
 }
 
 // Test for the input/output stream operators for Dinobot
-TEST(DinobotTest, TestInputOutput) {
+TEST(DinobotTest, TestInputOutput)
+{
     Dinobot dinobot("T-Rex", 50);
     std::stringstream ss;
 
@@ -73,7 +77,8 @@ TEST(DinobotTest, TestInputOutput) {
 }
 
 // Test for the input/output stream operators for Gun
-TEST(GunTest, TestInputOutput) {
+TEST(GunTest, TestInputOutput)
+{
     Gun gun("shotgun");
     std::stringstream ss;
 
@@ -86,7 +91,8 @@ TEST(GunTest, TestInputOutput) {
 }
 
 // Test for the input/output stream operators for Core
-TEST(CoreTest, TestInputOutput) {
+TEST(CoreTest, TestInputOutput)
+{
     Core core(100);
     std::stringstream ss;
 
@@ -99,7 +105,8 @@ TEST(CoreTest, TestInputOutput) {
 }
 
 // Test for comparison operators for Transformer
-TEST(TransformerTest, TestComparisonOperators) {
+TEST(TransformerTest, TestComparisonOperators)
+{
     Transformer t1(10, 50.0, true, Gun("laser"));
     Transformer t2(20, 100.0, false, Gun("machineGun"));
     Transformer t3(10, 50.0, true, Gun("laser"));
@@ -115,7 +122,8 @@ TEST(TransformerTest, TestComparisonOperators) {
 }
 
 // Test for comparison operators for Autobot
-TEST(AutobotTest, TestComparisonOperators) {
+TEST(AutobotTest, TestComparisonOperators)
+{
     Autobot a1("Autobots", 5);
     Autobot a2("Autobots", 10);
     Autobot a3("Decepticons", 5);
@@ -129,7 +137,8 @@ TEST(AutobotTest, TestComparisonOperators) {
 }
 
 // Test for comparison operators for Decepticon
-TEST(DecepticonTest, TestComparisonOperators) {
+TEST(DecepticonTest, TestComparisonOperators)
+{
     Decepticon d1("Evil plan A", 3);
     Decepticon d2("Evil plan B", 5);
     Decepticon d3("Evil plan A", 3);
@@ -143,7 +152,8 @@ TEST(DecepticonTest, TestComparisonOperators) {
 }
 
 // Test for comparison operators for Dinobot
-TEST(DinobotTest, TestComparisonOperators) {
+TEST(DinobotTest, TestComparisonOperators)
+{
     Dinobot d1("T-Rex", 50);
     Dinobot d2("Raptor", 30);
     Dinobot d3("T-Rex", 50);
@@ -157,7 +167,8 @@ TEST(DinobotTest, TestComparisonOperators) {
 }
 
 // Test for comparison operators for Gun
-TEST(GunTest, TestComparisonOperators) {
+TEST(GunTest, TestComparisonOperators)
+{
     Gun g1("laser");
     Gun g2("bazooka");
     Gun g3("laser");
@@ -170,7 +181,8 @@ TEST(GunTest, TestComparisonOperators) {
     EXPECT_FALSE(g2 >= g1);
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv)
+{
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
