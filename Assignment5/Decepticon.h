@@ -14,10 +14,10 @@ public:
     Decepticon(std::string evilPlanName = "Destroy the Earth", unsigned enemyCount = 0);
     Decepticon(std::string evilPlanName);
     Decepticon(unsigned enemyCount);
-    
-    virtual void transform();
-    virtual void fire();
-    virtual void drive(unsigned km);
+
+    void transform();
+    void fire();
+    void drive();
 
     std::string get_evilPlanName() const;
     unsigned get_enemyCount() const;

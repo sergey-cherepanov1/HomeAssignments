@@ -16,37 +16,15 @@ Transformer::Transformer(double fuel)
 
 void Transformer::transform()
 {
-    _form = !_form;
+    std::cout << "transform Transformer\n";
 }
 void Transformer::fire()
 {
-    if (_ammo != 0)
-    {
-        _ammo--;
-    }
-    else
-    {
-        std::cout << "No ammo! Reload!" << std::endl;
-    }
+    std::cout << "fire Transformer\n";
 }
-void Transformer::drive(unsigned km)
+void Transformer::drive()
 {
-    if (_form)
-    {
-        double cons = km * 0.08;
-        if (_fuel >= cons)
-        {
-            _fuel -= cons;
-        }
-        else
-        {
-            std::cout << "Not enough fuel! Refuel!\n";
-        }
-    }
-    else
-    {
-        std::cout << "You need to transform to drive!\n";
-    }
+    std::cout << "drive Transformer\n";
 }
 
 unsigned Transformer::get_ammo() const

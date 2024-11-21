@@ -14,11 +14,11 @@ public:
     Autobot(std::string teamName = "Autobots", unsigned allyCount = 0);
     Autobot(std::string teamName);
     Autobot(unsigned allyCount);
-    
-    virtual void transform();
-    virtual void fire();
-    virtual void drive(unsigned km);
-    
+
+    void transform();
+    void fire();
+    void drive();
+
     std::string get_teamName() const;
     unsigned get_allyCount() const;
     void make_alliance();

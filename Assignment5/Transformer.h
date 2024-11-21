@@ -18,7 +18,7 @@ public:
 
     virtual void transform();
     virtual void fire();
-    virtual void drive(unsigned km);
+    virtual void drive();
 
     unsigned get_ammo() const;
     double get_fuel() const;

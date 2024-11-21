@@ -28,7 +28,7 @@ void Decepticon::fire()
     std::cout << "fire Decepticon\n";
 }
 
-void Decepticon::drive(unsigned km)
+void Decepticon::drive()
 {
     std::cout << "drive Decepticon\n";
 }

@@ -24,7 +24,7 @@ void Autobot::fire()
     std::cout << "fire Autobot\n";
 }
 
-void Autobot::drive(unsigned km)
+void Autobot::drive()
 {
     std::cout << "drive Autobot\n";
 }

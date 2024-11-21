@@ -4,7 +4,7 @@
 ## Contacts
 st129987@stdudent.spbu.ru
 ## Description
-Expanded Assignment4 by
+Expanded Assignment4 by adding virtual methods
 ## Build
 make
 ## Run
