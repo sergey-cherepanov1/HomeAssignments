@@ -43,7 +43,7 @@ int main()
 
     std::vector<Transformer*> T = {&t1, &t2, &t3, &a1, &a2, &a3, &d1, &d2, &d3};
 
-    for (auto obj : T)
+    for (auto& obj : T)
     {
         obj->transform();
         obj->fire();
